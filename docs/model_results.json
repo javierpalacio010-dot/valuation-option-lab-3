@@ -1,0 +1,632 @@
+{
+  "model": {
+    "company": "Asteron Systems",
+    "ticker": "ASTR",
+    "valuation_date": "2026-10-16",
+    "spot": 96.0,
+    "strike": 105.0,
+    "maturity_years": 1.0,
+    "risk_free_rate": 0.045,
+    "dividend_yield": 0.012,
+    "volatility": 0.28,
+    "volatility_type": "implied",
+    "option_type": "call",
+    "exercise_style": "european",
+    "lattice_steps": 200,
+    "market_bid": 8.1,
+    "market_ask": 8.6,
+    "dcf_value": 106.0,
+    "comps_value": 101.0,
+    "market_mid": 8.35
+  },
+  "analyst_targets": [
+    82.0,
+    88.0,
+    91.0,
+    94.0,
+    96.0,
+    98.0,
+    100.0,
+    101.0,
+    103.0,
+    105.0,
+    108.0,
+    110.0,
+    114.0,
+    118.0,
+    126.0
+  ],
+  "analyst_stats": {
+    "count": 15,
+    "mean": 102.26666666666667,
+    "median": 101.0,
+    "std": 11.719743211878873,
+    "min": 82.0,
+    "max": 126.0
+  },
+  "valuation": {
+    "Current market": 96.0,
+    "Comparable companies": 101.0,
+    "Student DCF": 105.8357649941589,
+    "Analyst median": 101.0
+  },
+  "states": [
+    {
+      "state": "Severe bear",
+      "quantile": 0.05,
+      "terminal_price": 86.2,
+      "subjective_weight": 0.1,
+      "option_payoff": 0.0,
+      "weighted_payoff": 0.0
+    },
+    {
+      "state": "Bear",
+      "quantile": 0.25,
+      "terminal_price": 95.0,
+      "subjective_weight": 0.2,
+      "option_payoff": 0.0,
+      "weighted_payoff": 0.0
+    },
+    {
+      "state": "Base",
+      "quantile": 0.5,
+      "terminal_price": 101.0,
+      "subjective_weight": 0.4,
+      "option_payoff": 0.0,
+      "weighted_payoff": 0.0
+    },
+    {
+      "state": "Bull",
+      "quantile": 0.75,
+      "terminal_price": 109.0,
+      "subjective_weight": 0.2,
+      "option_payoff": 4.0,
+      "weighted_payoff": 0.8
+    },
+    {
+      "state": "Tail",
+      "quantile": 0.95,
+      "terminal_price": 120.39999999999999,
+      "subjective_weight": 0.1,
+      "option_payoff": 15.399999999999991,
+      "weighted_payoff": 1.5399999999999991
+    }
+  ],
+  "valuation_weighted_expected_payoff": 2.237034107489453,
+  "belief_decomposition": {
+    "weight_zero_payoff": 0.7,
+    "weight_positive_payoff": 0.30000000000000004,
+    "weighted_terminal_payoff": 2.339999999999999,
+    "discount_factor": 0.9559974818330998
+  },
+  "distribution_comparison": {
+    "analyst_log_dispersion": 0.11428825106416798,
+    "crr_horizon_volatility": 0.28,
+    "message": "Analyst targets are narrower than the volatility input used by CRR."
+  },
+  "lattice": {
+    "price": 8.332308324678896,
+    "u": 1.0199962898353323,
+    "d": 0.9803957229701683,
+    "p_star": 0.49921736500371044,
+    "dt": 0.005
+  },
+  "validation": {
+    "valid_risk_neutral_probability": true,
+    "inside_theoretical_bounds": true,
+    "put_call_parity_pass": true,
+    "convergence_pass": true,
+    "parity_residual": -4.796163466380676e-14,
+    "convergence_gap": -0.0015202185624829667
+  },
+  "convergence": [
+    {
+      "steps": 25,
+      "price": 8.388154142291295
+    },
+    {
+      "steps": 50,
+      "price": 8.316723781126562
+    },
+    {
+      "steps": 100,
+      "price": 8.348544737408599
+    },
+    {
+      "steps": 200,
+      "price": 8.332308324678896
+    },
+    {
+      "steps": 500,
+      "price": 8.330788106116414
+    }
+  ],
+  "comparison": {
+    "Analyst-scenario subjective payoff (not a price)": 2.237034107489453,
+    "CRR risk-neutral lattice value": 8.332308324678896,
+    "Observed market midpoint": 8.35
+  },
+  "dcf_display": {
+    "value": 105.8357649941589,
+    "source": "explicit build (data/dcf_inputs.csv)",
+    "reported_value": 106.0
+  },
+  "interpretation": {
+    "belief_values_are_prices": false,
+    "discounting_note": "Analyst-scenario and KDE values are subjective expected payoffs discounted at the risk-free rate. The weights are not risk-neutral, so these are not fair option prices."
+  },
+  "data_warning": {
+    "synthetic": true,
+    "message": "Demonstration data: some inputs are synthetic or template values. These figures are not real market research."
+  },
+  "extended": {
+    "valuation_upside": {
+      "Current market": 0.0,
+      "Comparable companies": 0.05208333333333326,
+      "Student DCF": 0.10245588535582173,
+      "Analyst median": 0.05208333333333326
+    },
+    "dcf": {
+      "terminal_value": 26284.3425254592,
+      "pv_terminal": 17480.281700702257,
+      "enterprise_value": 22667.152998831778,
+      "equity_value": 21167.152998831778,
+      "value_per_share": 105.8357649941589,
+      "terminal_share_of_ev": 0.771172352416872,
+      "wacc": 0.085,
+      "terminal_growth": 0.025,
+      "reported_dcf_value": 106.0,
+      "reconciliation_gap": -0.16423500584110684,
+      "reconciliation_gap_pct": -0.0015493868475576118,
+      "reconciled": 1.0,
+      "implied_terminal_roic": 0.08333333333333334,
+      "terminal_consistent": 0.0,
+      "template_inputs": 1.0,
+      "projection": [
+        {
+          "year": 1,
+          "revenue": 11232.0,
+          "ebit": 2021.76,
+          "nopat": 1597.1904,
+          "fcff": 1118.0332799999999,
+          "discount_factor": 0.9216589861751152,
+          "pv_fcff": 1030.4454193548386
+        },
+        {
+          "year": 2,
+          "revenue": 12018.240000000002,
+          "ebit": 2223.3744,
+          "nopat": 1756.4657760000002,
+          "fcff": 1229.5260432,
+          "discount_factor": 0.8494552867973413,
+          "pv_fcff": 1044.4273976512561
+        },
+        {
+          "year": 3,
+          "revenue": 12739.334400000002,
+          "ebit": 2420.4735360000004,
+          "nopat": 1912.1740934400004,
+          "fcff": 1338.5218654080002,
+          "discount_factor": 0.7829080984307294,
+          "pv_fcff": 1047.93960835453
+        },
+        {
+          "year": 4,
+          "revenue": 13376.301120000002,
+          "ebit": 2608.3787184000003,
+          "nopat": 2060.6191875360005,
+          "fcff": 1442.4334312752003,
+          "discount_factor": 0.7215742842679533,
+          "pv_fcff": 1040.8228707765707
+        },
+        {
+          "year": 5,
+          "revenue": 13911.353164800003,
+          "ebit": 2782.2706329600005,
+          "nopat": 2197.9938000384004,
+          "fcff": 1538.5956600268803,
+          "discount_factor": 0.6650454232884362,
+          "pv_fcff": 1023.2360019923275
+        }
+      ],
+      "sensitivity": {
+        "g=2.0%": {
+          "WACC=7.5%": 118.54413775648747,
+          "WACC=8.0%": 107.80346105258981,
+          "WACC=8.5%": 98.71902741619947,
+          "WACC=9.0%": 90.93584487277698,
+          "WACC=9.5%": 84.19358817313983
+        },
+        "g=2.5%": {
+          "WACC=7.5%": 129.01778544139432,
+          "WACC=8.0%": 116.37098939730811,
+          "WACC=8.5%": 105.8357649941589,
+          "WACC=9.0%": 96.92474572551619,
+          "WACC=9.5%": 89.28981478828356
+        },
+        "g=3.0%": {
+          "WACC=7.5%": 141.81891038961388,
+          "WACC=8.0%": 126.6520234109701,
+          "WACC=8.5%": 114.24645485902009,
+          "WACC=9.0%": 103.9117967203786,
+          "WACC=9.5%": 95.17007626729558
+        }
+      }
+    },
+    "distribution_diagnostics": {
+      "skewness": 0.30665259572011827,
+      "excess_kurtosis": -0.0702356589068236,
+      "q1": 95.0,
+      "q3": 109.0,
+      "iqr": 14.0,
+      "coefficient_of_variation": 0.1145998358397543,
+      "lower_fence": 74.0,
+      "upper_fence": 130.0,
+      "tukey_outliers": [],
+      "lowest_target": 82.0,
+      "highest_target": 126.0,
+      "share_above_spot": 0.6666666666666666,
+      "share_above_strike": 0.3333333333333333,
+      "publication_span_days": 14
+    },
+    "weight_sensitivity": {
+      "disclosed": 2.2370341074894524,
+      "equal": 3.7092702295124256,
+      "data_implied": 2.727779481497111
+    },
+    "data_implied_weights": {
+      "Severe bear": 0.13333333333333333,
+      "Bear": 0.26666666666666666,
+      "Base": 0.26666666666666666,
+      "Bull": 0.2,
+      "Tail": 0.13333333333333333
+    },
+    "kde": {
+      "value": 3.7713578876216864,
+      "bootstrap_95ci": [
+        0.8340653337330292,
+        7.175561117543933
+      ],
+      "mc_standard_error": 0.047289575846723796,
+      "prob_itm": 0.39115,
+      "n_sim": 20000,
+      "n_boot": 2000,
+      "seed": 42,
+      "method": "log-space Gaussian KDE, Silverman bandwidth",
+      "n_targets": 15,
+      "small_sample": false,
+      "histogram": {
+        "counts": [
+          5,
+          12,
+          40,
+          76,
+          194,
+          260,
+          424,
+          505,
+          638,
+          728,
+          872,
+          1028,
+          1130,
+          1284,
+          1313,
+          1328,
+          1295,
+          1237,
+          1163,
+          997,
+          889,
+          776,
+          669,
+          606,
+          487,
+          462,
+          362,
+          338,
+          248,
+          186,
+          153,
+          105,
+          81,
+          52,
+          22,
+          22,
+          6,
+          3,
+          1,
+          3
+        ],
+        "edges": [
+          68.36316680791907,
+          70.41623074840803,
+          72.46929468889697,
+          74.52235862938592,
+          76.57542256987487,
+          78.62848651036381,
+          80.68155045085277,
+          82.73461439134172,
+          84.78767833183066,
+          86.84074227231962,
+          88.89380621280856,
+          90.94687015329751,
+          92.99993409378646,
+          95.05299803427542,
+          97.10606197476436,
+          99.15912591525331,
+          101.21218985574225,
+          103.2652537962312,
+          105.31831773672016,
+          107.37138167720911,
+          109.42444561769805,
+          111.47750955818701,
+          113.53057349867595,
+          115.5836374391649,
+          117.63670137965386,
+          119.68976532014281,
+          121.74282926063175,
+          123.79589320112069,
+          125.84895714160965,
+          127.9020210820986,
+          129.95508502258755,
+          132.0081489630765,
+          134.06121290356543,
+          136.11427684405442,
+          138.16734078454334,
+          140.2204047250323,
+          142.27346866552125,
+          144.32653260601018,
+          146.37959654649916,
+          148.43266048698808,
+          150.48572442747704
+        ]
+      }
+    },
+    "black_scholes": {
+      "price": 8.326169509370636,
+      "d1": -0.06218628103459697,
+      "d2": -0.342186281034597,
+      "delta": 0.4695388352929914,
+      "vega_per_vol_point": 0.37768525290239546,
+      "risk_neutral_prob_itm": 0.3661053544507573,
+      "crr_minus_bsm": 0.006138815308259993,
+      "benchmark_applicable": true,
+      "benchmark_pass": true
+    },
+    "mispricing": {
+      "market_mid_minus_crr": 0.017691675321103162,
+      "market_mid_vs_crr_pct": 0.0021232622019882186,
+      "crr_inside_bid_ask": true,
+      "bid_ask_spread": 0.5,
+      "spread_pct_of_mid": 0.059880239520958084,
+      "market_mid_minus_belief_value": 6.112965892510546,
+      "market_mid_minus_kde_value": 4.578642112378313,
+      "implied_vol_model": "Black-Scholes-Merton (European)",
+      "implied_vol_bid": 0.2740102414786816,
+      "implied_vol_mid": 0.2806309469044208,
+      "implied_vol_ask": 0.2872483552992343,
+      "implied_minus_input_vol": 0.0006309469044207816
+    },
+    "sensitivity": {
+      "volatility": [
+        {
+          "input": 0.18000000000000002,
+          "price": 4.587149492382558
+        },
+        {
+          "input": 0.23000000000000004,
+          "price": 6.447068686517224
+        },
+        {
+          "input": 0.28,
+          "price": 8.332308324678896
+        },
+        {
+          "input": 0.33,
+          "price": 10.209606935799346
+        },
+        {
+          "input": 0.38,
+          "price": 12.121629464547825
+        }
+      ],
+      "risk_free_rate": [
+        {
+          "input": 0.024999999999999998,
+          "price": 7.617303668519417
+        },
+        {
+          "input": 0.034999999999999996,
+          "price": 7.969891167037573
+        },
+        {
+          "input": 0.045,
+          "price": 8.332308324678896
+        },
+        {
+          "input": 0.055,
+          "price": 8.704495516534612
+        },
+        {
+          "input": 0.065,
+          "price": 9.086376963901463
+        }
+      ],
+      "strike": [
+        {
+          "input": 94.5,
+          "price": 12.732567064076816
+        },
+        {
+          "input": 99.75,
+          "price": 10.32792563481026
+        },
+        {
+          "input": 105.0,
+          "price": 8.332308324678896
+        },
+        {
+          "input": 110.25,
+          "price": 6.66196330368655
+        },
+        {
+          "input": 115.50000000000001,
+          "price": 5.280447141138175
+        }
+      ],
+      "maturity_years": [
+        {
+          "input": 0.5,
+          "price": 4.717414938058749
+        },
+        {
+          "input": 0.75,
+          "price": 6.646005130860503
+        },
+        {
+          "input": 1.0,
+          "price": 8.332308324678896
+        },
+        {
+          "input": 1.25,
+          "price": 9.840375841000705
+        },
+        {
+          "input": 1.5,
+          "price": 11.257560912330387
+        }
+      ],
+      "spot": [
+        {
+          "input": 86.4,
+          "price": 4.496291953243743
+        },
+        {
+          "input": 91.19999999999999,
+          "price": 6.252931559645547
+        },
+        {
+          "input": 96.0,
+          "price": 8.332308324678896
+        },
+        {
+          "input": 100.80000000000001,
+          "price": 10.734956531823869
+        },
+        {
+          "input": 105.60000000000001,
+          "price": 13.484503629115203
+        }
+      ]
+    },
+    "maturity_alignment": {
+      "analyst_horizon_years": 1.0,
+      "option_maturity_years": 1.0,
+      "alignment_gap_years": 0.0,
+      "aligned": true,
+      "message": "Analyst horizon and option maturity are aligned."
+    },
+    "source_audit": {
+      "documented_inputs": 8,
+      "synthetic_inputs": [
+        "Spot price",
+        "Risk-free rate",
+        "Dividend yield",
+        "Volatility",
+        "Option bid",
+        "Option ask"
+      ],
+      "missing_url": [
+        "Spot price",
+        "Risk-free rate",
+        "Dividend yield",
+        "Volatility",
+        "Option bid",
+        "Option ask"
+      ],
+      "analyst_targets_synthetic": true,
+      "complete": false
+    },
+    "model_risk": [
+      {
+        "check": "Horizon alignment",
+        "status": "pass",
+        "detail": "Analyst horizon and option maturity are aligned."
+      },
+      {
+        "check": "Put-call parity",
+        "status": "pass",
+        "detail": "Residual -4.80e-14"
+      },
+      {
+        "check": "Lattice convergence",
+        "status": "pass",
+        "detail": "200 vs 500 step gap -0.0015"
+      },
+      {
+        "check": "Black-Scholes benchmark",
+        "status": "pass",
+        "detail": "CRR minus BSM +0.0061"
+      },
+      {
+        "check": "Analyst vs. option volatility",
+        "status": "warn",
+        "detail": "Analyst log dispersion 11.4% vs CRR horizon volatility 28.0%"
+      },
+      {
+        "check": "Scenario-weight robustness",
+        "status": "warn",
+        "detail": "Five-state value ranges $2.24 to $3.71 across weighting schemes"
+      },
+      {
+        "check": "Analyst outliers",
+        "status": "pass",
+        "detail": "Tukey outliers: none"
+      },
+      {
+        "check": "Bid-ask liquidity",
+        "status": "pass",
+        "detail": "Spread is 6.0% of midpoint"
+      },
+      {
+        "check": "Source documentation",
+        "status": "warn",
+        "detail": "Synthetic or unsourced inputs remain; replace before submission"
+      },
+      {
+        "check": "KDE sample size",
+        "status": "pass",
+        "detail": "15 analyst targets; the KDE is a smoothed opinion distribution, not a forecast"
+      },
+      {
+        "check": "Terminal-value concentration",
+        "status": "warn",
+        "detail": "Terminal value is 77% of DCF enterprise value"
+      },
+      {
+        "check": "DCF reconciliation",
+        "status": "pass",
+        "detail": "Built $105.84 vs reported $106.00 (-0.2%; tolerance 5%)"
+      },
+      {
+        "check": "Terminal consistency",
+        "status": "warn",
+        "detail": "Implied terminal ROIC 8.3% vs WACC 8.5%"
+      },
+      {
+        "check": "DCF assumptions sourced",
+        "status": "warn",
+        "detail": "Template assumptions remain in dcf_inputs.csv"
+      }
+    ],
+    "volatility_card": {
+      "input": 0.28,
+      "type": "implied",
+      "implied_from_mid": 0.2806309469044208,
+      "implied_model": "Black-Scholes-Merton (European)",
+      "analyst_log_dispersion": 0.11428825106416798,
+      "vega_per_vol_point": 0.37768525290239546
+    }
+  }
+}
